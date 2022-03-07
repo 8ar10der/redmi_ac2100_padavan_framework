@@ -1,18 +1,29 @@
-padavan-firmware-modify-tool
------------------------------
+# redmi_ac2100_padavan_framework
 
-This is someone else's work. Get it from there: <http://www.right.com.cn/forum/forum.php?mod=viewthread&tid=204663&highlight=%BD%E2%B0%FC>
+Redmi Router AC2100 customized framework.
 
-But that guy didnt metion where it came from.
+红米路由器AC2100 PADAVAN（老毛子）固件解包自修补
 
-Padavan is an open-source, GPL licened router firmware, but there are people
-who modified the project without open sourcing it. You can use this tool
-to see what is changed.
+## Extract Tool 解包工具
 
-If you know where this tool comes from, pls tell me <mailto:tylertempdev@gmail.com>
+<https://github.com/TylerTemp/padavan-firmware-modify-tool>
 
-## Usage ##
+### Usage 工具使用
 
 extract: `modify.sh e firmware.trx`
 
 re-create: `modify.sh c /path/to/unpacked/firmware/folder`
+
+## Original Framework 原版固件
+
+Get from <https://iroot.cc/162.html>
+
+## What be modified 改动部分
+
+主要就是修复了原固件中Adguard Home的启动脚本，路由器后台不能将53端口的udp请求转发给Adguard home的错误。
+
+解决方案来源：<https://www.right.com.cn/forum/forum.php?mod=viewthread&tid=4052341>
+
+Fix the bug in the Adguard Home boot script which let the requests from port 53 can not be forward to the Adguard Home as excepted.
+
+Solution founder: <https://www.right.com.cn/forum/forum.php?mod=viewthread&tid=4052341>
